@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "486896924349",
+    "project_id": "barberaplication-dfb56",
+    "storage_bucket": "barberaplication-dfb56.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:486896924349:android:43d15f921c7eb4b69c29d4",
+        "android_client_info": {
+          "package_name": "com.example.barberr_application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgCyz5EnLPWZp9Y7JQlP1Bsbsk0Q5y3pE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
