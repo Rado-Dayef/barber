@@ -26,15 +26,7 @@ class HomeAppBarWidget extends StatelessWidget {
                     UserModel? user = snapshot.data;
                     return Row(
                       children: [
-                        CircleAvatar(
-                          backgroundColor: AppColors.petrol,
-                          radius: 25.sp,
-                          child: CachedNetworkImageWidget(
-                            imageUrl: user!.image.value,
-                            borderRadius: BorderRadius.circular(100.sp),
-                            placeholderColor: AppColors.white,
-                          ),
-                        ),
+
                         const GapWidget(15),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -46,7 +38,7 @@ class HomeAppBarWidget extends StatelessWidget {
                             ),
                             const GapWidget(3),
                             Text(
-                              user.name.value,
+                              user!.name.value,
                               style: AppFonts.fontHeavy17black,
                             ),
                           ],
@@ -62,15 +54,7 @@ class HomeAppBarWidget extends StatelessWidget {
             () {
               return Row(
                 children: [
-                  CircleAvatar(
-                    backgroundColor: AppColors.petrol,
-                    radius: 25.sp,
-                    child: CachedNetworkImageWidget(
-                      imageUrl: controller.currentUser.value.image.value,
-                      borderRadius: BorderRadius.circular(100.sp),
-                      placeholderColor: AppColors.white,
-                    ),
-                  ),
+
                   const GapWidget(15),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,

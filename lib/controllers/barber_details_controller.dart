@@ -47,7 +47,7 @@ class BarberDetailsController extends GetxController {
               {
                 AppStrings.barberLocationField: barber.location,
                 AppStrings.barberPhoneField: barber.phone,
-                AppStrings.barberImageField: barber.image,
+                //AppStrings.barberImageField: barber.image,
                 AppStrings.barberNameField: barber.name,
                 AppStrings.dateField: day + DateFormat(AppStrings.monthYearFormat).format(now),
               },

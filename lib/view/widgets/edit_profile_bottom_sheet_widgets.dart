@@ -4,7 +4,7 @@ import 'package:barberr_application/constants/app_imports.dart';
 
 EditProfileWidgets({
   required imageFile,
-  required image,
+  //required image,
   required Key formState,
   required RxString name,
   required String email,
@@ -17,11 +17,11 @@ EditProfileWidgets({
     GapWidget(10),
     InkWell(
       onTap: () async {
-        final pickedFile = await ImagePicker().pickImage(source: ImageSource.gallery);
+  /*      final pickedFile = await ImagePicker().pickImage(source: ImageSource.gallery);
         if (pickedFile != null) {
           imageFile = File(pickedFile.path);
           image.value = imageFile!.path;
-        }
+        }*/
       },
       child: CircleAvatar(
         radius: 40.sp,
@@ -46,10 +46,7 @@ EditProfileWidgets({
                       : Container(
                           height: double.infinity,
                           width: double.infinity,
-                          child: CachedNetworkImageWidget(
-                            imageUrl: image!.value,
-                            placeholderColor: AppColors.petrol,
-                          ),
+                          child: Text("image")
                         ),
                 );
               },

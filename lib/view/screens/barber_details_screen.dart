@@ -28,7 +28,7 @@ class BarberDetailsScreen extends GetWidget<BarberDetailsController> {
                     alignment: Alignment.topCenter,
                     children: [
                       Hero(
-                        tag: controller.barber.image + controller.barber.name,
+                        tag: controller.barber.email + controller.barber.name,
                         child: Card(
                           elevation: 0.sp,
                           margin: EdgeInsets.all(0.sp),
@@ -37,7 +37,7 @@ class BarberDetailsScreen extends GetWidget<BarberDetailsController> {
                             height: 360.sp,
                             width: double.infinity,
                             child: CachedNetworkImageWidget(
-                              imageUrl: controller.barber.image,
+                              imageUrl: "https://thebarbershop-waterford.ie/wp-content/uploads/2023/06/barber-shop-kilbarry.jpg",
                               placeholderColor: AppColors.petrol,
                               borderRadius: BorderRadius.circular(10.sp),
                             ),

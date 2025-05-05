@@ -14,12 +14,12 @@ class SignupController extends GetxController {
   RxBool isObscure = true.obs;
 
   /// Pick user profile image from the phone gallery
-  void pickImage() async {
+/*  void pickImage() async {
     final pickedFile = await ImagePicker().pickImage(source: ImageSource.gallery);
     if (pickedFile != null) {
       image.value = File(pickedFile.path);
     }
-  }
+  }*/
 
   /// Validate on the user data before signup to make sure that the data is valid.
   signUpValidator() async {
@@ -31,8 +31,8 @@ class SignupController extends GetxController {
       var connection = await InternetConnectionChecker().hasConnection;
       if (connection == true) {
         try {
-          String? imageUrl = await uploadUserImage(emailAddress!, image);
-          if (imageUrl != null) {
+         // String? imageUrl = await uploadUserImage(emailAddress!, image);
+          if (true) {
             UserCredential userCredential = await fireauth.createUserWithEmailAndPassword(
               email: emailAddress!,
               password: password!,
@@ -43,7 +43,7 @@ class SignupController extends GetxController {
               await usersCollection.doc(emailAddress).set({
                 AppStrings.nameField: userName,
                 AppStrings.emailField: emailAddress,
-                AppStrings.profileImageField: imageUrl,
+               // AppStrings.profileImageField: imageUrl,
               });
               await usersCollection.doc(AppStrings.authUsersDocument).set(
                 {
@@ -74,6 +74,7 @@ class SignupController extends GetxController {
     }
   }
 
+/*
   /// Upload the user profile image on profileImages/user_email_formatted_profile_image.jpg fire storage and return the image URL.
   Future<String?> uploadUserImage(String emailAddress, Rx<File?> image) async {
     try {
@@ -96,6 +97,7 @@ class SignupController extends GetxController {
       return null;
     }
   }
+*/
 
   /// Go to login screen if the signup operation is successful.
   void signupButtonOnClick() async {

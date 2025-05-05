@@ -29,20 +29,7 @@ class BarberDetailsTitlesWidget extends StatelessWidget {
         ),
         GapWidget(10),
         subTitle ??
-            Hero(
-              tag: barber!.name + barber!.image,
-              child: Card(
-                elevation: 0.sp,
-                margin: EdgeInsets.all(0.sp),
-                color: AppColors.transparent,
-                child: Text(
-                  barber!.name,
-                  style: AppFonts.fontHeavy25White.copyWith(
-                    color: AppColors.black,
-                  ),
-                ),
-              ),
-            ),
+
         Divider(
           height: 25.sp,
           color: AppColors.petrol,

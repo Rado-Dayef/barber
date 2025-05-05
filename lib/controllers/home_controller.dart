@@ -4,7 +4,7 @@ class HomeController extends GetxController {
   Rx<UserModel> currentUser = Rx<UserModel>(
     UserModel(
       email: RxString(AppStrings.notAvailableText),
-      image: RxString(AppStrings.notAvailableText),
+     // image: RxString(AppStrings.notAvailableText),
       phone: RxString(AppStrings.notAvailableText),
       name: RxString(AppStrings.notAvailableText),
       reservations: RxList<ReservationModel>(),
@@ -41,7 +41,7 @@ class HomeController extends GetxController {
       } else {
         return UserModel(
           email: RxString(AppStrings.notAvailableText),
-          image: RxString(AppStrings.notAvailableText),
+        //  image: RxString(AppStrings.notAvailableText),
           phone: RxString(AppStrings.notAvailableText),
           name: RxString(AppStrings.notAvailableText),
           reservations: RxList<ReservationModel>(),
@@ -51,7 +51,7 @@ class HomeController extends GetxController {
       AppDefaults.defaultToast(AppStrings.errorFetchingToast + e.toString());
       return UserModel(
         email: RxString(AppStrings.notAvailableText),
-        image: RxString(AppStrings.notAvailableText),
+      //  image: RxString(AppStrings.notAvailableText),
         phone: RxString(AppStrings.notAvailableText),
         name: RxString(AppStrings.notAvailableText),
         reservations: RxList<ReservationModel>(),

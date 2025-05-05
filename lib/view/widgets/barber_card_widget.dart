@@ -32,13 +32,13 @@ class BarberCardWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(20.sp),
             ),
             child: Hero(
-              tag: barber.image + barber.name,
+              tag: barber.name + barber.email,
               child: Card(
                 elevation: 0.sp,
                 margin: EdgeInsets.all(0.sp),
                 color: AppColors.transparent,
                 child: CachedNetworkImageWidget(
-                  imageUrl: barber.image,
+                  imageUrl: "https://thebarbershop-waterford.ie/wp-content/uploads/2023/06/barber-shop-kilbarry.jpg",
                   placeholderColor: AppColors.white,
                 ),
               ),
@@ -54,7 +54,7 @@ class BarberCardWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Hero(
-                  tag: barber.name + barber.image,
+                  tag: barber.name + barber.email,
                   child: Card(
                     elevation: 0.sp,
                     margin: EdgeInsets.all(0.sp),

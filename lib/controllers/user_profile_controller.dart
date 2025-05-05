@@ -12,7 +12,7 @@ class UserProfileController extends GetxController {
   static FirebaseFirestore firestore = FirebaseFirestore.instance;
   static FirebaseStorage firestorage = FirebaseStorage.instance;
   static String currentUserEmail = fireauth.currentUser!.email!;
-  RxString image = homeControllerStatic.currentUser.value.image;
+ // RxString image = homeControllerStatic.currentUser.value.image;
   RxString phone = homeControllerStatic.currentUser.value.phone;
   RxString name = homeControllerStatic.currentUser.value.name;
   static HomeController homeControllerStatic = Get.find();
@@ -33,7 +33,7 @@ class UserProfileController extends GetxController {
     AppDefaults.defaultBottomSheet(
       EditProfileWidgets(
         imageFile: imageFile,
-        image: homeController.currentUser.value.image,
+     //   image: homeController.currentUser.value.image,
         formState: editProfileFormState,
         name: name,
         email: currentUserEmail,
@@ -55,10 +55,10 @@ class UserProfileController extends GetxController {
             Reference storageReference = firestorage.ref().child(AppStrings.profileImagesBase + formattedEmail + AppStrings.profileImageNameEndBase);
             try {
               /// Upload the image file from the user's phone system.
-              await storageReference.putFile(
+         /*     await storageReference.putFile(
                 File(image.value),
                 SettableMetadata(contentType: AppStrings.imagesTypeBase),
-              );
+              );*/
 
               /// Get the download URL of the uploaded image.
               String downloadURL = await storageReference.getDownloadURL();

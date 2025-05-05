@@ -74,7 +74,6 @@ class SignupScreen extends GetWidget<SignupController> {
                           children: [
                             const GapWidget(20),
                             InkWell(
-                              onTap: controller.pickImage,
                               child: CircleAvatar(
                                 backgroundColor: AppColors.white,
                                 radius: 40.sp,
