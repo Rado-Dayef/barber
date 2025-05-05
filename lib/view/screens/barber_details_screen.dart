@@ -180,6 +180,7 @@ class BarberDetailsScreen extends GetWidget<BarberDetailsController> {
                                 },
                               ),
                       ),
+
                       BarberDetailsTitlesWidget(
                         AppStrings.setDayText,
                         subTitle: Container(
