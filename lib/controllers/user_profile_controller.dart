@@ -162,7 +162,7 @@ class UserProfileController extends GetxController {
               homeController.currentUser.value.reservations.firstOrNull[AppStrings.barberNameField],
               locationOnClick: () => launch(AppStrings.telText + homeController.currentUser.value.reservations.firstOrNull[AppStrings.barberLocationField]),
               phoneOnClick: () => launch(AppStrings.telText + homeController.currentUser.value.reservations.firstOrNull[AppStrings.barberPhoneField]),
-              barberImage: homeController.currentUser.value.reservations.firstOrNull[AppStrings.barberImageField],
+             // barberImage: homeController.currentUser.value.reservations.firstOrNull[AppStrings.barberImageField],
               date: homeController.currentUser.value.reservations.firstOrNull[AppStrings.dateField],
             ),
           );
