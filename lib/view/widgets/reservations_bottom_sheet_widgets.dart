@@ -32,6 +32,7 @@ List<Widget> ReservationsBottomSheetWidgets(
                   width: 250.sp,
                   child: Icon(
                     Icons.checklist_sharp,
+
                     color: AppColors.white,
                     size: 250.sp,
                   ),
